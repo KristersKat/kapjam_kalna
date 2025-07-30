@@ -24,7 +24,7 @@ export function Studio() {
                 <li>• Industry standard equipment: Aston, Dunlop, Fender, Sennheiser, etc.</li>
                 <li>• Full DAW support</li>
                 <li>• Drum kit included - bring your own cymbals or rent on site</li>
-                <li>• Affordable hourly rate with friendly staff</li>
+                <li>• Ready to record from a wide variaty of genres</li>
                 <li>• A place to make your ambitions come true</li>
               </ul>
             </div>
@@ -40,17 +40,17 @@ export function Studio() {
 
           <div className="space-y-6">
             <div className="relative h-64 rounded-lg overflow-hidden">
-              <Image src="/placeholder.svg?height=400&width=600" alt="Control Room" fill className="object-cover" />
+              <Image src="/Studio.jpg" alt="Studio" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent" />
               <div className="absolute bottom-4 left-4">
-                <h4 className="text-xl font-bold text-white">Control Room</h4>
+                <h4 className="text-xl font-bold text-white">Studio</h4>
               </div>
             </div>
             <div className="relative h-64 rounded-lg overflow-hidden">
-              <Image src="/placeholder.svg?height=400&width=600" alt="Live Room" fill className="object-cover" />
+              <Image src="/Drums.jpg" alt="Drums" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent" />
               <div className="absolute bottom-4 left-4">
-                <h4 className="text-xl font-bold text-white">Live Room</h4>
+                <h4 className="text-xl font-bold text-white">Drums</h4>
               </div>
             </div>
           </div>

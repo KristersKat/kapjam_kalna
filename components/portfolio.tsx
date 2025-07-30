@@ -7,28 +7,24 @@ import Image from "next/image"
 
 const projects = [
   {
-    title: "Midnight Dreams",
-    artist: "Luna & The Shadows",
-    genre: "Alternative Rock",
-    image: "/placeholder.svg?height=300&width=300",
+    artist: "Ainārs Virga",
+    genre: "Rock",
+    image: "/Ainars_Virga.jpg",
   },
   {
-    title: "Electric Pulse",
-    artist: "Neon Collective",
-    genre: "Electronic",
-    image: "/placeholder.svg?height=300&width=300",
+    artist: "Reinis Liepa",
+    genre: "Punk Rock",
+    image: "/Reinis_Liepa.jpg",
   },
   {
-    title: "Acoustic Sessions",
-    artist: "River Stone",
-    genre: "Folk",
-    image: "/placeholder.svg?height=300&width=300",
+    artist: "Lūkass Ļitvīnovs",
+    genre: "Rap",
+    image: "/Lukass_Litvinovs.jpg",
   },
   {
-    title: "Urban Beats",
-    artist: "City Lights",
-    genre: "Hip Hop",
-    image: "/placeholder.svg?height=300&width=300",
+    artist: "Dita Svarupa",
+    genre: "Christian Music",
+    image: "/Dita_Svarupa.jpeg",
   },
 ]
 
@@ -39,7 +35,7 @@ export function Portfolio() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Portfolio</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Listen to some of the artists we've had the privilege to work with
+            See some of the artists we've had the privilege to work with
           </p>
         </div>
 
@@ -53,7 +49,7 @@ export function Portfolio() {
                 <div className="relative overflow-hidden">
                   <Image
                     src={project.image || "/placeholder.svg"}
-                    alt={project.title}
+                    alt={project.artist}
                     width={300}
                     height={300}
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
@@ -66,8 +62,7 @@ export function Portfolio() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
-                  <p className="text-[#c6a16c] font-medium mb-1">{project.artist}</p>
+                  <h3 className="text-xl font-bold text-[#c6a16c] mb-1">{project.artist}</h3>
                   <p className="text-gray-600 text-sm">{project.genre}</p>
                 </div>
               </CardContent>
