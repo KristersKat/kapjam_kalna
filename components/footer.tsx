@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Image src="/KK_logo.png" alt="Kāpjam Kalnā Logo" width={32} height={32} className="h-8 w-10" />
-              <span className="text-2xl font-bold text-gray-900">Kāpjam Kalnā</span>
+              <span className="text-2xl font-bold text-gray-900">KĀPJAM KALNĀ</span>
             </Link>
             <p className="text-gray-600 mb-4">
               Music and Sound Production Studio by Ronalds Znatnajs

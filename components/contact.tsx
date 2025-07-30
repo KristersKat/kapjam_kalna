@@ -53,7 +53,7 @@ export function Contact() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="name" className="text-gray-900">
-                        Name
+                        Name*
                       </Label>
                       <Input
                         id="name"
@@ -65,7 +65,7 @@ export function Contact() {
                     </div>
                     <div>
                       <Label htmlFor="email" className="text-gray-900">
-                        Email
+                        Email*
                       </Label>
                       <Input
                         id="email"
@@ -117,7 +117,7 @@ export function Contact() {
 
                   <div>
                     <Label htmlFor="message" className="text-gray-900">
-                      Message
+                      Message*
                     </Label>
                     <Textarea
                       id="message"
@@ -125,6 +125,7 @@ export function Contact() {
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="bg-white border-gray-300 text-gray-900 min-h-[120px]"
                       placeholder="Tell us about your project and what equipment you need..."
+                      required
                     />
                   </div>
 
