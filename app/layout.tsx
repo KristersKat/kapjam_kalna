@@ -4,7 +4,9 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Kāpjam Kalnā Studio',
   description: 'Music Studio by Ronalds Znatnajs',
-  generator: 'v0.dev',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({
