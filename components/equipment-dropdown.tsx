@@ -7,8 +7,8 @@ const equipmentList = [
   "Accoustic guitars*",
   "Electric guitars*",
   "Bass guitars*",
+  "Cymbals**",
   "Mandolin",
-  "Cymbals",
   "Tambourine",
   "Keyboard",
   "Electric guitar amplifier",
@@ -40,7 +40,10 @@ export function EquipmentDropdown({ trigger }: EquipmentDropdownProps) {
             </ul>
             <div className="mt-4 pt-4 border-t border-gray-200">
               <p className="text-sm text-gray-600">
-                <span className="font-semibold">*</span> Guitars are free to use if you bring your own strings
+                <span className="font-semibold">*</span> Guitars are for an extra fee (depends on the guitar), unless you bring your own strings
+              </p>
+              <p className="text-sm text-gray-600">
+                <span className="font-semibold">**</span> Cymbals are for an extra fee of 25€, or you can bring your own cymbals
               </p>
             </div>
           </CardContent>

@@ -43,7 +43,7 @@ export function Contact() {
           <div>
             <Card className="bg-gray-50 border-gray-200">
               <CardHeader>
-                <CardTitle id="book-session" className="text-gray-900">Book a Session</CardTitle>
+                <CardTitle id="book-session" className="text-gray-900">Book a Session or Ask a Question</CardTitle>
                 <CardDescription className="text-gray-600">
                   Fill out the form and we'll get back to you
                 </CardDescription>

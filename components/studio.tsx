@@ -31,7 +31,7 @@ export function Studio() {
             <EquipmentDropdown 
               trigger={(isOpen) => (
                 <h3 id="equipment" className="text-3xl font-bold mb-6 text-[#c6a16c] flex items-center gap-2 hover:text-[#a88a5a] transition-colors">
-                  Rentable Equipment
+                  Available Equipment
                   {isOpen ? <ChevronUp className="h-6 w-6" /> : <ChevronDown className="h-6 w-6" />}
                 </h3>
               )}
