@@ -19,20 +19,20 @@ export function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#services" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
+            <Link href="/#services" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
               Services
             </Link>
-            <Link href="#studio" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
+            <Link href="/#studio" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
               Studio
             </Link>
-            <Link href="#portfolio" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
-              Portfolio
+            <Link href="/clothing" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
+              Clothing
             </Link>
-            <Link href="#contact" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
+            <Link href="/#contact" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
               Contact
             </Link>
             <Button asChild className="bg-[#c6a16c] hover:bg-[#b8956b] text-white"> 
-              <a href="#contact">Book Session</a>
+              <Link href="/#contact">Book Session</Link>
             </Button>
           </nav>
 
@@ -44,20 +44,20 @@ export function Header() {
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
             <div className="flex flex-col space-y-4">
-              <Link href="#services" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
+              <Link href="/#services" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
                 Services
               </Link>
-              <Link href="#studio" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
+              <Link href="/#studio" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
                 Studio
               </Link>
-              <Link href="#portfolio" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
-                Portfolio
+              <Link href="/clothing" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
+                Clothing
               </Link>
-              <Link href="#contact" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
+              <Link href="/#contact" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
                 Contact
               </Link>
               <Button asChild className="bg-[#c6a16c] hover:bg-[#b8956b] text-white w-fit">
-                <a href="#contact">Book Session</a>
+                <Link href="/#contact">Book Session</Link>
               </Button>
             </div>
           </nav>

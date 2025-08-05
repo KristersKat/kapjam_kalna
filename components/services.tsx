@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mic, Drum, Video } from "lucide-react"
+import Link from "next/link"
 
 interface ServiceCard {
   title: string
@@ -48,7 +49,8 @@ const otherServices: ServiceCard[] = [
   {
     title: "Rock n Rola Gadalaiki",
     description: "Clothing from Ronalds Znatnajs' brand Rock n Rola Gadalaiki.",
-    price: "Coming soon"
+    price: "From 25€",
+    action: "clothing"
   }
 ]
 
@@ -118,24 +120,43 @@ export function Services() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {otherServices.map((service) => (
-              <Card
-                key={service.title}
-                className="bg-white border-gray-200 hover:border-[#c6a16c] transition-colors shadow-sm cursor-pointer hover:shadow-md"
-                onClick={() => handleServiceClick(service.action)}
-              >
-                <CardHeader className="flex flex-row items-center gap-4">
-                  <CardTitle className="text-xl font-semibold text-gray-900">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-600">
-                    {service.title === "Rock n Rola Gadalaiki" 
-                      ? <>Clothing from Ronalds Znatnajs' brand <span className="font-bold">Rock n Rola Gadalaiki</span>.</>
-                      : service.description
-                    }
-                  </CardDescription>
-                  <div className="mt-4 text-lg font-bold text-[#c6a16c]">{service.price}</div>
-                </CardContent>
-              </Card>
+              service.action === "clothing" ? (
+                <Link key={service.title} href="/clothing" className="block">
+                  <Card className="bg-white border-gray-200 hover:border-[#c6a16c] transition-colors shadow-sm cursor-pointer hover:shadow-md">
+                    <CardHeader className="flex flex-row items-center gap-4">
+                      <CardTitle className="text-xl font-semibold text-gray-900">{service.title}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-gray-600">
+                        {service.title === "Rock n Rola Gadalaiki" 
+                          ? <>Clothing from Ronalds Znatnajs' brand <span className="font-bold">Rock n Rola Gadalaiki</span>.</>
+                          : service.description
+                        }
+                      </CardDescription>
+                      <div className="mt-4 text-lg font-bold text-[#c6a16c]">{service.price}</div>
+                    </CardContent>
+                  </Card>
+                </Link>
+              ) : (
+                <Card
+                  key={service.title}
+                  className="bg-white border-gray-200 hover:border-[#c6a16c] transition-colors shadow-sm cursor-pointer hover:shadow-md"
+                  onClick={() => handleServiceClick(service.action)}
+                >
+                  <CardHeader className="flex flex-row items-center gap-4">
+                    <CardTitle className="text-xl font-semibold text-gray-900">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-gray-600">
+                      {service.title === "Rock n Rola Gadalaiki" 
+                        ? <>Clothing from Ronalds Znatnajs' brand <span className="font-bold">Rock n Rola Gadalaiki</span>.</>
+                        : service.description
+                      }
+                    </CardDescription>
+                    <div className="mt-4 text-lg font-bold text-[#c6a16c]">{service.price}</div>
+                  </CardContent>
+                </Card>
+              )
             ))}
           </div>
         </div>
