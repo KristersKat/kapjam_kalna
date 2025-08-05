@@ -56,9 +56,9 @@ export function Header() {
               <Link href="/#contact" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
                 Contact
               </Link>
-              <Button asChild className="bg-[#c6a16c] hover:bg-[#b8956b] text-white w-fit">
-                <Link href="/#contact">Book Session</Link>
-              </Button>
+              <Link href="/#contact" className="text-[#c6a16c] hover:text-[#b8956b] transition-colors">
+                Book Session
+              </Link>
             </div>
           </nav>
         )}
