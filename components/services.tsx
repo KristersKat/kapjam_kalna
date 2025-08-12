@@ -107,7 +107,10 @@ export function Services() {
           <div className="flex justify-center mt-16">
             <div className="w-full max-w-2xl text-center">
               <div className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">All studio services from <span className="text-[#c6a16c]">35€/h</span></div>
-              <div className="text-base md:text-lg text-gray-600">For information on renting equipment and video production, please contact us.</div>
+              <div className="text-base md:text-lg text-gray-600 mb-4">For information on renting equipment and video production, please contact us.</div>
+              <div className="text-lg font-semibold text-[#c6a16c] bg-[#c6a16c]/10 px-4 py-2 rounded-lg inline-block">
+                * Upcoming musicians and rappers pay <span className="font-bold">20€/h</span>
+              </div>
             </div>
           </div>
         </div>

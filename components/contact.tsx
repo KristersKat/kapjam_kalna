@@ -279,7 +279,7 @@ export function Contact() {
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Music Recording From (per hour)</span>
+                    <span className="text-gray-600">Music Recording From (per hour)*</span>
                     <span className="text-gray-900 font-semibold">35€</span>
                   </div>
                   <div className="flex justify-between">
@@ -289,6 +289,11 @@ export function Contact() {
                   <div className="flex justify-between">
                     <span className="text-gray-600">Equipment Rental</span>
                     <span className="text-gray-900 font-semibold">Varies</span>
+                  </div>
+                  <div className="pt-2 border-t border-gray-200">
+                    <div className="text-sm text-[#c6a16c] font-medium">
+                      * Upcoming musicians and rappers pay <span className="font-bold">20€/h</span> for music recording
+                    </div>
                   </div>
                 </div>
               </CardContent>
