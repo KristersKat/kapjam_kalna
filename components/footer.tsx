@@ -1,8 +1,11 @@
 import Link from "next/link"
 import { Instagram, Facebook, Youtube } from "lucide-react"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
 
 export function Footer() {
+  const t = useTranslations('footer')
+
   return (
     <footer className="bg-gray-100 border-t border-gray-200 py-8">
       <div className="container mx-auto px-8">
@@ -13,7 +16,7 @@ export function Footer() {
               <span className="text-2xl font-bold text-gray-900">KĀPJAM KALNĀ</span>
             </Link>
             <p className="text-gray-600 mb-4">
-              Music and Sound Production Studio by Ronalds Znatnajs
+              {t('description')}
             </p>
             <div className="flex space-x-4">
               <Link href="https://www.facebook.com/Climbthemountainstudio/" className="text-gray-500 hover:text-[#c6a16c] transition-colors">
@@ -37,33 +40,33 @@ export function Footer() {
 
           <div className="grid grid-cols-2 gap-8">
             <div>
-              <h3 className="text-gray-900 font-semibold mb-4">Quick Links</h3>
+              <h3 className="text-gray-900 font-semibold mb-4">{t('quickLinks.title')}</h3>
               <ul className="space-y-2">
                 <li>
                   <Link href="#services" className="text-gray-600 hover:text-[#c6a16c] transition-colors">
-                    Services
+                    {t('quickLinks.services')}
                   </Link>
                 </li>
                 <li>
                   <Link href="#studio" className="text-gray-600 hover:text-[#c6a16c] transition-colors">
-                    Studio
+                    {t('quickLinks.studio')}
                   </Link>
                 </li>
                 <li>
                   <Link href="#portfolio" className="text-gray-600 hover:text-[#c6a16c] transition-colors">
-                    Portfolio
+                    {t('quickLinks.portfolio')}
                   </Link>
                 </li>
                 <li>
                   <Link href="#contact" className="text-gray-600 hover:text-[#c6a16c] transition-colors">
-                    Contact
+                    {t('quickLinks.contact')}
                   </Link>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-gray-900 font-semibold mb-4">Contact</h3>
+              <h3 className="text-gray-900 font-semibold mb-4">{t('contact.title')}</h3>
               <div className="space-y-1 text-gray-600 text-sm">
                 <p>Ainavas iela 4, Priedkalne</p>
                 <p>ronyalmighty@gmail.com</p>
@@ -74,7 +77,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-200 mt-6 pt-6 text-center">
-          <p className="text-gray-500 text-sm">© 2025 Kāpjam Kalnā. All rights reserved.</p>
+          <p className="text-gray-500 text-sm">{t('copyright')}</p>
         </div>
       </div>
     </footer>

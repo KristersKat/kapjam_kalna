@@ -1,0 +1,174 @@
+{
+    "hero": {
+        "description": "Ronalda Znatnaja mūzikas un skaņas ierakstu studija",
+        "button": "Rezervēt sesiju"
+    },
+    "header": {
+        "nav": {
+            "services": "Pakalpojumi",
+            "studio": "Studija",
+            "clothing": "Apģērbs",
+            "contact": "Kontakti",
+            "bookSession": "Rezervēt sesiju"
+        }
+    },
+    "services": {
+        "title": "Mūsu pakalpojumi",
+        "studioServices": {
+            "title": "Studijas pakalpojumi",
+            "subtitle": "Profesionāli studijas piedāvājumi",
+            "recording": {
+                "title": "Ierakstīšana",
+                "description": "Profesionāla daudzkanālu ierakstīšana ar nozares standarta aprīkojumu un akustiķi apstrādātām telpām."
+            },
+            "equipmentRental": {
+                "title": "Aprīkojuma noma",
+                "description": "Mēs izīrējam visu no mikrofoniem līdz mūzikas pedāļiem."
+            },
+            "videoProduction": {
+                "title": "Video producēšana",
+                "description": "Mēs ierakstīsim profesionālus video jums mūsu studijā."
+            }
+        },
+        "otherServices": {
+            "title": "Citi pakalpojumi",
+            "subtitle": "Izpētiet mūsu papildu piedāvājumus",
+            "musicTherapy": {
+                "title": "Mūzikas terapija",
+                "description": "Īpaši izstrādātas mūzikas terapijas sesijas labsajūtai un atslābināšanai.",
+                "price": "35€/sesija"
+            },
+            "guitarLessons": {
+                "title": "Ģitāras stundas",
+                "description": "Privātas ģitāras stundas visiem prasmju līmeņiem, pielāgotas jūsu mērķiem.",
+                "price": "25€/stunda"
+            },
+            "clothing": {
+                "title": "Rock n Rola Gadalaiki",
+                "description": "Apģērbs no Ronalda Znatnaja zīmola Rock n Rola Gadalaiki.",
+                "price": "No 25€"
+            }
+        },
+        "pricing": {
+            "baseRate": "Visi studijas pakalpojumi no",
+            "basePrice": "35€/h",
+            "info": "Informācijai par aprīkojuma nomu un video producēšanu, lūdzu sazinieties ar mums.",
+            "discount": "Jaunie mūziķi un reperi maksā",
+            "discountPrice": "20€/h"
+        }
+    },
+    "studio": {
+        "title": "Par studiju",
+        "description": "Mēs esam mūzikas studija, kas atrodas Rīgas mierīgajā laukos, piedāvājot dažādus pakalpojumus no mūzikas ierakstīšanas līdz video producēšanai.",
+        "features": {
+            "title": "Studijas īpašības",
+            "items": [
+                "Akustiķi apstrādāta ierakstu telpa",
+                "Nozares standarta aprīkojums: Aston, Dunlop, Fender, Sennheiser utt.",
+                "Pilna DAW atbalsts",
+                "Bungu komplekts iekļauts - atnesiet savus čaļus vai izīrējiet uz vietas",
+                "Gatavs ierakstīt dažādus žanrus",
+                "Vieta, kur īstenot savus mērķus"
+            ]
+        },
+        "equipment": {
+            "title": "Pieejamais aprīkojums",
+            "items": [
+                "Akustiskās ģitāras*",
+                "Elektriskās ģitāras*",
+                "Basģitāras*",
+                "Šķivji**",
+                "Mandolīna",
+                "Tamburīns",
+                "Klavieres",
+                "Elektriskās ģitāras pastiprinātājs",
+                "Pedāļi",
+                "Pad kontrolieris",
+                "Cannon 80D kamera"
+            ],
+            "notes": {
+                "guitars": "Ģitāras ir par papildu maksu, vai atnesat savas stīgas",
+                "cymbals": "Šķivji ir par papildu maksu 25€, vai jūs varat atnest savus šķivjus"
+            }
+        },
+        "images": {
+            "studio": "Studija",
+            "drums": "Bungas"
+        }
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "description": "Skatiet dažus no māksliniekiem, ar kuriem mums ir bijusi iespēja strādāt",
+        "viewFull": "Skatīt pilno portfolio"
+    },
+    "contact": {
+        "title": "Sazinieties ar mums",
+        "description": "Gatavs radīt kaut ko brīnišķīgu? Sazinieties ar mums, lai rezervētu sesiju vai apspriestu savu projektu",
+        "form": {
+            "title": "Rezervēt sesiju vai uzdot jautājumu",
+            "subtitle": "Aizpildiet formu un mēs sazināsimies ar jums",
+            "name": "Vārds*",
+            "email": "E-pasts*",
+            "phone": "Tālrunis",
+            "date": "Ideālais datums",
+            "pickDate": "Izvēlēties datumu",
+            "message": "Ziņojums*",
+            "messagePlaceholder": "Pastāstiet mums par savu projektu un kādu aprīkojumu jums vajag...",
+            "sendMessage": "Sūtīt ziņojumu",
+            "sending": "Sūta...",
+            "success": "Ziņojums veiksmīgi nosūtīts!"
+        },
+        "info": {
+            "title": "Kontaktinformācija",
+            "address": {
+                "label": "Adrese",
+                "value": "Ainavas iela 4, Priedkalne"
+            },
+            "phone": {
+                "label": "Tālrunis",
+                "value": "+371 27 752 677"
+            },
+            "email": {
+                "label": "E-pasts",
+                "value": "ronyalmighty@gmail.com"
+            }
+        },
+        "rates": {
+            "title": "Studijas tarifi",
+            "musicRecording": "Mūzikas ierakstīšana no (stundā)*",
+            "musicPrice": "35€",
+            "videoRecording": "Video ierakstīšana (stundā)",
+            "videoPrice": "20€",
+            "equipmentRental": "Aprīkojuma noma",
+            "equipmentPrice": "Mainās",
+            "discountNote": "Jaunie mūziķi un reperi maksā",
+            "discountPrice": "20€/h",
+            "discountFor": "par mūzikas ierakstīšanu"
+        }
+    },
+    "clothing": {
+        "title": "Rock n Rola Gadalaiki",
+        "subtitle": "Unikāli dizaini no Ronalda Znatnaja",
+        "products": {
+            "cap": {
+                "title": "Rock n Rola Gadalaiki Cepure",
+                "alt": "Rock n Rola Gadalaiki Trucker Cepure",
+                "price": "25€"
+            }
+        }
+    },
+    "footer": {
+        "description": "Ronalda Znatnaja mūzikas un skaņas ierakstu studija",
+        "quickLinks": {
+            "title": "Ātrie saiti",
+            "services": "Pakalpojumi",
+            "studio": "Studija",
+            "portfolio": "Portfolio",
+            "contact": "Kontakti"
+        },
+        "contact": {
+            "title": "Kontakti"
+        },
+        "copyright": "© 2025 Kāpjam Kalnā. Visas tiesības aizsargātas."
+    }
+}

@@ -1,0 +1,174 @@
+{
+    "hero": {
+        "description": "Music and Sound Production Studio by Ronalds Znatnajs",
+        "button": "Book a Session"
+    },
+    "header": {
+        "nav": {
+            "services": "Services",
+            "studio": "Studio",
+            "clothing": "Clothing",
+            "contact": "Contact",
+            "bookSession": "Book Session"
+        }
+    },
+    "services": {
+        "title": "Our Services",
+        "studioServices": {
+            "title": "Studio Services",
+            "subtitle": "Professional studio offerings",
+            "recording": {
+                "title": "Recording",
+                "description": "Professional multi-track recording with industry-standard equipment and acoustically treated rooms."
+            },
+            "equipmentRental": {
+                "title": "Equipment Rental",
+                "description": "We rent out everything from microphones to music pedals."
+            },
+            "videoProduction": {
+                "title": "Video Production",
+                "description": "We will record professional videos for you inside our studio."
+            }
+        },
+        "otherServices": {
+            "title": "Other Services",
+            "subtitle": "Explore our additional offerings",
+            "musicTherapy": {
+                "title": "Music Therapy",
+                "description": "Specially curated music therapy sessions for well-being and relaxation.",
+                "price": "35€/session"
+            },
+            "guitarLessons": {
+                "title": "Guitar Lessons",
+                "description": "Private guitar lessons for all skill levels, tailored to your goals.",
+                "price": "25€/hour"
+            },
+            "clothing": {
+                "title": "Rock n Rola Gadalaiki",
+                "description": "Clothing from Ronalds Znatnajs' brand Rock n Rola Gadalaiki.",
+                "price": "From 25€"
+            }
+        },
+        "pricing": {
+            "baseRate": "All studio services from",
+            "basePrice": "35€/h",
+            "info": "For information on renting equipment and video production, please contact us.",
+            "discount": "Upcoming musicians and rappers pay",
+            "discountPrice": "20€/h"
+        }
+    },
+    "studio": {
+        "title": "About the Studio",
+        "description": "We are a music studio located in the quiet countryside of Riga, offering a range of services from music recording to video production.",
+        "features": {
+            "title": "Studio Features",
+            "items": [
+                "Acoustically treated recording room",
+                "Industry standard equipment: Aston, Dunlop, Fender, Sennheiser, etc.",
+                "Full DAW support",
+                "Drum kit included - bring your own cymbals or rent on site",
+                "Ready to record from a wide variety of genres",
+                "A place to make your ambitions come true"
+            ]
+        },
+        "equipment": {
+            "title": "Available Equipment",
+            "items": [
+                "Accoustic guitars*",
+                "Electric guitars*",
+                "Bass guitars*",
+                "Cymbals**",
+                "Mandolin",
+                "Tambourine",
+                "Keyboard",
+                "Electric guitar amplifier",
+                "Various pedals",
+                "Pad controller",
+                "Cannon 80D camera"
+            ],
+            "notes": {
+                "guitars": "Guitars are for an extra fee (depends on the guitar), unless you bring your own strings",
+                "cymbals": "Cymbals are for an extra fee of 25€, or you can bring your own cymbals"
+            }
+        },
+        "images": {
+            "studio": "Studio",
+            "drums": "Drums"
+        }
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "description": "See some of the artists we've had the privilege to work with",
+        "viewFull": "View Full Portfolio"
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "description": "Ready to create something amazing? Contact us to book your session or discuss your project",
+        "form": {
+            "title": "Book a Session or Ask a Question",
+            "subtitle": "Fill out the form and we'll get back to you",
+            "name": "Name*",
+            "email": "Email*",
+            "phone": "Phone",
+            "date": "Ideal Date",
+            "pickDate": "Pick a date",
+            "message": "Message*",
+            "messagePlaceholder": "Tell us about your project and what equipment you need...",
+            "sendMessage": "Send Message",
+            "sending": "Sending...",
+            "success": "Message sent successfully!"
+        },
+        "info": {
+            "title": "Contact Information",
+            "address": {
+                "label": "Address",
+                "value": "Ainavas iela 4, Priedkalne"
+            },
+            "phone": {
+                "label": "Phone",
+                "value": "+371 27 752 677"
+            },
+            "email": {
+                "label": "Email",
+                "value": "ronyalmighty@gmail.com"
+            }
+        },
+        "rates": {
+            "title": "Studio Rates",
+            "musicRecording": "Music Recording From (per hour)*",
+            "musicPrice": "35€",
+            "videoRecording": "Video Recording (per hour)",
+            "videoPrice": "20€",
+            "equipmentRental": "Equipment Rental",
+            "equipmentPrice": "Varies",
+            "discountNote": "Upcoming musicians and rappers pay",
+            "discountPrice": "20€/h",
+            "discountFor": "for music recording"
+        }
+    },
+    "clothing": {
+        "title": "Rock n Rola Gadalaiki",
+        "subtitle": "Unique designs by Ronalds Znatnajs",
+        "products": {
+            "cap": {
+                "title": "Rock n Rola Gadalaiki Cap",
+                "alt": "Rock n Rola Gadalaiki Trucker Cap",
+                "price": "25€"
+            }
+        }
+    },
+    "footer": {
+        "description": "Music and Sound Production Studio by Ronalds Znatnajs",
+        "quickLinks": {
+            "title": "Quick Links",
+            "services": "Services",
+            "studio": "Studio",
+            "portfolio": "Portfolio",
+            "contact": "Contact"
+        },
+        "contact": {
+            "title": "Contact"
+        },
+        "copyright": "© 2025 Kāpjam Kalnā. All rights reserved."
+    }
+}

@@ -2,8 +2,11 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card } from "@/components/ui/card"
 import Image from "next/image"
+import { getTranslations } from "next-intl/server"
 
-export default function ClothingPage() {
+export default async function ClothingPage() {
+  const t = await getTranslations('clothing')
+
   return (
     <div className="min-h-screen bg-white text-gray-900">
       <Header />
@@ -13,10 +16,10 @@ export default function ClothingPage() {
         <div className="container mx-auto px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Rock n Rola Gadalaiki
+              {t('title')}
             </h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Unique designs by Ronalds Znatnajs
+              {t('subtitle')}
             </p>
           </div>
         </div>
@@ -31,7 +34,7 @@ export default function ClothingPage() {
               <div className="relative w-full h-80">
                 <Image
                   src="/Cap.jpeg"
-                  alt="Rock n Rola Gadalaiki Trucker Cap"
+                  alt={t('products.cap.alt')}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 400px"
@@ -41,9 +44,9 @@ export default function ClothingPage() {
               {/* Product Header and Price */}
               <div className="p-6 text-center">
                 <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                  Rock n Rola Gadalaiki Cap
+                  {t('products.cap.title')}
                 </h2>
-                <p className="text-2xl font-bold text-[#c6a16c]">25€</p>
+                <p className="text-2xl font-bold text-[#c6a16c]">{t('products.cap.price')}</p>
               </div>
             </Card>
           </div>

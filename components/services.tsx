@@ -3,6 +3,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Mic, Drum, Video } from "lucide-react"
 import Link from "next/link"
+import { useTranslations } from "next-intl"
+import { Link as IntlLink } from "@/i18n/navigation"
 
 interface ServiceCard {
   title: string
@@ -12,49 +14,51 @@ interface ServiceCard {
   action?: string
 }
 
-const studioServices: ServiceCard[] = [
-  {
-    icon: Mic,
-    title: "Recording",
-    description: "Professional multi-track recording with industry-standard equipment and acoustically treated rooms.",
-    action: "contact"
-  },
-  {
-    icon: Drum,
-    title: "Equipment Rental",
-    description: "We rent out everything from microphones to music pedals.",
-    action: "equipment"
-  },
-  {
-    icon: Video,
-    title: "Video Production",
-    description: "We will record professional videos for you inside our studio.",
-    action: "contact"
-  }
-]
-
-const otherServices: ServiceCard[] = [
-  {
-    title: "Music Therapy",
-    description: "Specially curated music therapy sessions for well-being and relaxation.",
-    price: "35€/session",
-    action: "contact"
-  },
-  {
-    title: "Guitar Lessons",
-    description: "Private guitar lessons for all skill levels, tailored to your goals.",
-    price: "25€/hour",
-    action: "contact"
-  },
-  {
-    title: "Rock n Rola Gadalaiki",
-    description: "Clothing from Ronalds Znatnajs' brand Rock n Rola Gadalaiki.",
-    price: "From 25€",
-    action: "clothing"
-  }
-]
-
 export function Services() {
+  const t = useTranslations('services')
+
+  const studioServices: ServiceCard[] = [
+    {
+      icon: Mic,
+      title: t('studioServices.recording.title'),
+      description: t('studioServices.recording.description'),
+      action: "contact"
+    },
+    {
+      icon: Drum,
+      title: t('studioServices.equipmentRental.title'),
+      description: t('studioServices.equipmentRental.description'),
+      action: "equipment"
+    },
+    {
+      icon: Video,
+      title: t('studioServices.videoProduction.title'),
+      description: t('studioServices.videoProduction.description'),
+      action: "contact"
+    }
+  ]
+
+  const otherServices: ServiceCard[] = [
+    {
+      title: t('otherServices.musicTherapy.title'),
+      description: t('otherServices.musicTherapy.description'),
+      price: t('otherServices.musicTherapy.price'),
+      action: "contact"
+    },
+    {
+      title: t('otherServices.guitarLessons.title'),
+      description: t('otherServices.guitarLessons.description'),
+      price: t('otherServices.guitarLessons.price'),
+      action: "contact"
+    },
+    {
+      title: t('otherServices.clothing.title'),
+      description: t('otherServices.clothing.description'),
+      price: t('otherServices.clothing.price'),
+      action: "clothing"
+    }
+  ]
+
   function handleServiceClick(action?: string) {
     if (!action) return
     if (action === "contact") {
@@ -77,14 +81,14 @@ export function Services() {
     <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Our Services</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">{t('title')}</h2>
         </div>
 
         {/* Studio Services */}
         <div className="mb-20">
           <div className="text-center mb-10">
-            <h3 className="text-3xl md:text-4xl font-bold mb-2 text-gray-900">Studio Services</h3>
-            <p className="text-base md:text-lg text-gray-600">Professional studio offerings</p>
+            <h3 className="text-3xl md:text-4xl font-bold mb-2 text-gray-900">{t('studioServices.title')}</h3>
+            <p className="text-base md:text-lg text-gray-600">{t('studioServices.subtitle')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {studioServices.map((service, index) => (
@@ -106,10 +110,10 @@ export function Services() {
           </div>
           <div className="flex justify-center mt-16">
             <div className="w-full max-w-2xl text-center">
-              <div className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">All studio services from <span className="text-[#c6a16c]">35€/h</span></div>
-              <div className="text-base md:text-lg text-gray-600 mb-4">For information on renting equipment and video production, please contact us.</div>
+              <div className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">{t('pricing.baseRate')} <span className="text-[#c6a16c]">{t('pricing.basePrice')}</span></div>
+              <div className="text-base md:text-lg text-gray-600 mb-4">{t('pricing.info')}</div>
               <div className="text-lg font-semibold text-[#c6a16c] bg-[#c6a16c]/10 px-4 py-2 rounded-lg inline-block">
-                * Upcoming musicians and rappers pay <span className="font-bold">20€/h</span>
+                * {t('pricing.discount')} <span className="font-bold">{t('pricing.discountPrice')}</span>
               </div>
             </div>
           </div>
@@ -118,28 +122,28 @@ export function Services() {
         {/* Other Services */}
         <div>
           <div className="text-center mb-10">
-            <h3 className="text-3xl md:text-4xl font-bold mb-2 text-gray-900">Other Services</h3>
-            <p className="text-base md:text-lg text-gray-600">Explore our additional offerings</p>
+            <h3 className="text-3xl md:text-4xl font-bold mb-2 text-gray-900">{t('otherServices.title')}</h3>
+            <p className="text-base md:text-lg text-gray-600">{t('otherServices.subtitle')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {otherServices.map((service) => (
               service.action === "clothing" ? (
-                <Link key={service.title} href="/clothing" className="block">
+                <IntlLink key={service.title} href="/clothing" className="block">
                   <Card className="bg-white border-gray-200 hover:border-[#c6a16c] transition-colors shadow-sm cursor-pointer hover:shadow-md">
                     <CardHeader className="flex flex-row items-center gap-4">
                       <CardTitle className="text-xl font-semibold text-gray-900">{service.title}</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <CardDescription className="text-gray-600">
-                        {service.title === "Rock n Rola Gadalaiki" 
-                          ? <>Clothing from Ronalds Znatnajs' brand <span className="font-bold">Rock n Rola Gadalaiki</span>.</>
+                        {service.title === t('otherServices.clothing.title') 
+                          ? <>{t('otherServices.clothing.description')}</>
                           : service.description
                         }
                       </CardDescription>
                       <div className="mt-4 text-lg font-bold text-[#c6a16c]">{service.price}</div>
                     </CardContent>
                   </Card>
-                </Link>
+                </IntlLink>
               ) : (
                 <Card
                   key={service.title}
@@ -151,8 +155,8 @@ export function Services() {
                   </CardHeader>
                   <CardContent>
                     <CardDescription className="text-gray-600">
-                      {service.title === "Rock n Rola Gadalaiki" 
-                        ? <>Clothing from Ronalds Znatnajs' brand <span className="font-bold">Rock n Rola Gadalaiki</span>.</>
+                      {service.title === t('otherServices.clothing.title') 
+                        ? <>{t('otherServices.clothing.description')}</>
                         : service.description
                       }
                     </CardDescription>

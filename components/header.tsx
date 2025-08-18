@@ -5,9 +5,13 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
+import { useTranslations } from "next-intl"
+import { LanguageSwitcher } from "./language-switcher"
+import { Link as IntlLink } from "@/i18n/navigation"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const t = useTranslations('header')
 
   return (
     <header className="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 border-b border-gray-200">
@@ -20,44 +24,48 @@ export function Header() {
 
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="/#services" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
-              Services
+              {t('nav.services')}
             </Link>
             <Link href="/#studio" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
-              Studio
+              {t('nav.studio')}
             </Link>
-            <Link href="/clothing" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
-              Clothing
-            </Link>
+            <IntlLink href="/clothing" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
+              {t('nav.clothing')}
+            </IntlLink>
             <Link href="/#contact" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
-              Contact
+              {t('nav.contact')}
             </Link>
+            <LanguageSwitcher />
             <Button asChild className="bg-[#c6a16c] hover:bg-[#b8956b] text-white"> 
-              <Link href="/#contact">Book Session</Link>
+              <Link href="/#contact">{t('nav.bookSession')}</Link>
             </Button>
           </nav>
 
-          <button className="md:hidden text-gray-900" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </button>
+          <div className="md:hidden flex items-center space-x-4">
+            <LanguageSwitcher />
+            <button className="text-gray-900" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
             <div className="flex flex-col space-y-4">
               <Link href="/#services" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
-                Services
+                {t('nav.services')}
               </Link>
               <Link href="/#studio" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
-                Studio
+                {t('nav.studio')}
               </Link>
-              <Link href="/clothing" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
-                Clothing
-              </Link>
+              <IntlLink href="/clothing" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
+                {t('nav.clothing')}
+              </IntlLink>
               <Link href="/#contact" className="text-gray-700 hover:text-[#c6a16c] transition-colors">
-                Contact
+                {t('nav.contact')}
               </Link>
               <Link href="/#contact" className="text-[#c6a16c] hover:text-[#b8956b] transition-colors">
-                Book Session
+                {t('nav.bookSession')}
               </Link>
             </div>
           </nav>

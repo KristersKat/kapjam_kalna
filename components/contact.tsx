@@ -17,6 +17,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { cn } from "@/lib/utils"
 import { sendContactEmail } from "@/app/actions/contact"
 import { useToast } from "@/hooks/use-toast"
+import { useTranslations } from "next-intl"
 
 const contactFormSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters").max(50, "Name must be less than 50 characters"),
@@ -33,6 +34,7 @@ export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
   const { toast } = useToast()
+  const t = useTranslations('contact')
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
@@ -91,9 +93,9 @@ export function Contact() {
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">Get In Touch</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">{t('title')}</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ready to create something amazing? Contact us to book your session or discuss your project
+            {t('description')}
           </p>
         </div>
 
@@ -101,9 +103,9 @@ export function Contact() {
           <div>
             <Card className="bg-gray-50 border-gray-200">
               <CardHeader>
-                <CardTitle id="book-session" className="text-gray-900">Book a Session or Ask a Question</CardTitle>
+                <CardTitle id="book-session" className="text-gray-900">{t('form.title')}</CardTitle>
                 <CardDescription className="text-gray-600">
-                  Fill out the form and we'll get back to you
+                  {t('form.subtitle')}
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -115,7 +117,7 @@ export function Contact() {
                         name="name"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-gray-900">Name*</FormLabel>
+                            <FormLabel className="text-gray-900">{t('form.name')}</FormLabel>
                             <FormControl>
                               <Input
                                 {...field}
@@ -132,7 +134,7 @@ export function Contact() {
                         name="email"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-gray-900">Email*</FormLabel>
+                            <FormLabel className="text-gray-900">{t('form.email')}</FormLabel>
                             <FormControl>
                               <Input
                                 {...field}
@@ -153,7 +155,7 @@ export function Contact() {
                         name="phone"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-gray-900">Phone</FormLabel>
+                            <FormLabel className="text-gray-900">{t('form.phone')}</FormLabel>
                             <FormControl>
                               <Input
                                 {...field}
@@ -170,7 +172,7 @@ export function Contact() {
                         name="date"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel className="text-gray-900">Ideal Date</FormLabel>
+                            <FormLabel className="text-gray-900">{t('form.date')}</FormLabel>
                             <FormControl>
                               <Popover>
                                 <PopoverTrigger asChild>
@@ -182,7 +184,7 @@ export function Contact() {
                                     )}
                                     disabled={isSubmitting}
                                   >
-                                    {field.value ? field.value.toLocaleDateString() : "Pick a date"}
+                                    {field.value ? field.value.toLocaleDateString() : t('form.pickDate')}
                                   </Button>
                                 </PopoverTrigger>
                                 <PopoverContent className="w-auto p-0">
@@ -206,12 +208,12 @@ export function Contact() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel className="text-gray-900">Message*</FormLabel>
+                          <FormLabel className="text-gray-900">{t('form.message')}</FormLabel>
                           <FormControl>
                             <Textarea
                               {...field}
                               className="bg-white border-gray-300 text-gray-900 min-h-[120px]"
-                              placeholder="Tell us about your project and what equipment you need..."
+                              placeholder={t('form.messagePlaceholder')}
                               disabled={isSubmitting}
                             />
                           </FormControl>
@@ -223,7 +225,7 @@ export function Contact() {
                     {showSuccess && (
                       <div className="flex space-x-2 text-[#c6a16c] font-medium">
                         <CheckCircle className="h-4 w-4" />
-                        <span>Message sent successfully!</span>
+                        <span>{t('form.success')}</span>
                       </div>
                     )}
 
@@ -232,7 +234,7 @@ export function Contact() {
                       className="w-full bg-[#c6a16c] hover:bg-[#b8956b] text-white"
                       disabled={isSubmitting}
                     >
-                      {isSubmitting ? "Sending..." : "Send Message"}
+                      {isSubmitting ? t('form.sending') : t('form.sendMessage')}
                     </Button>
                   </form>
                 </Form>
@@ -242,14 +244,14 @@ export function Contact() {
 
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-[#c6a16c]">Contact Information</h3>
+              <h3 className="text-2xl font-bold mb-6 text-[#c6a16c]">{t('info.title')}</h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <MapPin className="h-6 w-6 text-[#c6a16c] mt-1" />
                   <div>
-                    <h4 className="font-semibold text-gray-900">Address</h4>
+                    <h4 className="font-semibold text-gray-900">{t('info.address.label')}</h4>
                     <p className="text-gray-600">
-                      Ainavas iela 4, Priedkalne
+                      {t('info.address.value')}
                     </p>
                   </div>
                 </div>
@@ -257,16 +259,16 @@ export function Contact() {
                 <div className="flex items-start space-x-4">
                   <Phone className="h-6 w-6 text-[#c6a16c] mt-1" />
                   <div>
-                    <h4 className="font-semibold text-gray-900">Phone</h4>
-                    <p className="text-gray-600">+371 27 752 677</p>
+                    <h4 className="font-semibold text-gray-900">{t('info.phone.label')}</h4>
+                    <p className="text-gray-600">{t('info.phone.value')}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
                   <Mail className="h-6 w-6 text-[#c6a16c] mt-1" />
                   <div>
-                    <h4 className="font-semibold text-gray-900">Email</h4>
-                    <p className="text-gray-600">ronyalmighty@gmail.com</p>
+                    <h4 className="font-semibold text-gray-900">{t('info.email.label')}</h4>
+                    <p className="text-gray-600">{t('info.email.value')}</p>
                   </div>
                 </div>
               </div>
@@ -274,25 +276,25 @@ export function Contact() {
 
             <Card className="bg-gray-50 border-gray-200">
               <CardHeader>
-                <CardTitle className="text-gray-900">Studio Rates</CardTitle>
+                <CardTitle className="text-gray-900">{t('rates.title')}</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Music Recording From (per hour)*</span>
-                    <span className="text-gray-900 font-semibold">35€</span>
+                    <span className="text-gray-600">{t('rates.musicRecording')}</span>
+                    <span className="text-gray-900 font-semibold">{t('rates.musicPrice')}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Video Recording (per hour)</span>
-                    <span className="text-gray-900 font-semibold">20€</span>
+                    <span className="text-gray-600">{t('rates.videoRecording')}</span>
+                    <span className="text-gray-900 font-semibold">{t('rates.videoPrice')}</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Equipment Rental</span>
-                    <span className="text-gray-900 font-semibold">Varies</span>
+                    <span className="text-gray-600">{t('rates.equipmentRental')}</span>
+                    <span className="text-gray-900 font-semibold">{t('rates.equipmentPrice')}</span>
                   </div>
                   <div className="pt-2 border-t border-gray-200">
                     <div className="text-sm text-[#c6a16c] font-medium">
-                      * Upcoming musicians and rappers pay <span className="font-bold">20€/h</span> for music recording
+                      * {t('rates.discountNote')} <span className="font-bold">{t('rates.discountPrice')}</span> {t('rates.discountFor')}
                     </div>
                   </div>
                 </div>

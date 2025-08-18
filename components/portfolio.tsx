@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Play, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react"
 import Image from "next/image"
 import { useState, useEffect } from "react"
+import { useTranslations } from "next-intl"
 
 const allProjects = [
   {
@@ -54,6 +55,7 @@ export function Portfolio() {
   const [shuffledProjects, setShuffledProjects] = useState(allProjects)
   const [isAnimating, setIsAnimating] = useState(false)
   const projectsToShow = 4
+  const t = useTranslations('portfolio')
 
   useEffect(() => {
     // Shuffle projects on component mount
@@ -91,9 +93,9 @@ export function Portfolio() {
     <section id="portfolio" className="py-12 md:py-20 bg-gray-50">
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">Portfolio</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">{t('title')}</h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-            See some of the artists we've had the privilege to work with
+            {t('description')}
           </p>
         </div>
 
@@ -190,7 +192,7 @@ export function Portfolio() {
             onClick={() => window.open("https://www.youtube.com/@RonsVlog", "_blank")}
           >
             <ExternalLink className="mr-2 h-4 w-4 md:h-5 md:w-5" />
-            View Full Portfolio
+            {t('viewFull')}
           </Button>
         </div>
       </div>
