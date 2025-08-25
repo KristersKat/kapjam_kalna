@@ -41,7 +41,7 @@ export async function sendContactEmail(data: ContactFormData) {
     // Email content
     const mailOptions = {
       from: `"Kapjam Kalna Website" <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER,
+      to: process.env.EMAIL_RECEIVER,
       replyTo: validatedData.email,
       subject: `New Contact Form Submission from ${validatedData.name}`,
       html: `
