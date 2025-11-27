@@ -16,18 +16,18 @@
         "title": "Mūsu pakalpojumi",
         "studioServices": {
             "title": "Studijas pakalpojumi",
-            "subtitle": "Profesionāli studijas piedāvājumi",
+            "subtitle": "Profesionāli studijas pakalpojumi",
             "recording": {
                 "title": "Ierakstīšana",
                 "description": "Profesionāla daudzkanālu ierakstīšana ar nozares standarta aprīkojumu un akustiķi apstrādātām telpām."
             },
             "equipmentRental": {
                 "title": "Aprīkojuma noma",
-                "description": "Mēs izīrējam visu no mikrofoniem līdz mūzikas pedāļiem."
+                "description": "Piedāvājam nomā visu nepieciešamo – no mikrofoniem līdz efektu pedāļiem."
             },
             "videoProduction": {
                 "title": "Video producēšana",
-                "description": "Mēs ierakstīsim profesionālus video jums mūsu studijā."
+                "description": "Nodrošinām profesionālu video filmēšanu mūsu studijā."
             }
         },
         "otherServices": {
@@ -53,22 +53,22 @@
             "baseRate": "Visi studijas pakalpojumi no",
             "basePrice": "35€/h",
             "info": "Informācijai par aprīkojuma nomu un video producēšanu, lūdzu sazinieties ar mums.",
-            "discount": "Jaunie mūziķi un reperi maksā",
+            "discount": "Cena jaunajiem mūziķiem un reperiem:",
             "discountPrice": "20€/h"
         }
     },
     "studio": {
         "title": "Par studiju",
-        "description": "Mēs esam mūzikas studija, kas atrodas Rīgas mierīgajā laukos, piedāvājot dažādus pakalpojumus no mūzikas ierakstīšanas līdz video producēšanai.",
+        "description": "Mēs esam mūzikas studija, kas atrodas klusā Pierīgas lauku vidē, piedāvājot plašu pakalpojumu klāstu no mūzikas ierakstīšanas līdz video producēšanai.",
         "features": {
-            "title": "Studijas īpašības",
+            "title": "Studijas priekšrocības",
             "items": [
-                "Akustiķi apstrādāta ierakstu telpa",
+                "Akustiski apstrādāta ierakstu telpa",
                 "Nozares standarta aprīkojums: Aston, Dunlop, Fender, Sennheiser utt.",
-                "Pilna DAW atbalsts",
-                "Bungu komplekts iekļauts - atnesiet savus šķīvjus vai izīrējiet uz vietas",
-                "Gatavs ierakstīt dažādus žanrus",
-                "Vieta, kur īstenot savus mērķus"
+                "Pilns DAW atbalsts",
+                "Pieejams bungu komplekts - ņemiet līdzi savus šķīvjus vai nomājiet tos uz vietas",
+                "Gatava ierakstīt dažādus žanrus",
+                "Vieta, kur īstenot savas ieceres"
             ]
         },
         "equipment": {
@@ -77,7 +77,7 @@
                 "Akustiskās ģitāras*",
                 "Elektriskās ģitāras*",
                 "Basģitāras*",
-                "Šķivji**",
+                "Šķīvji**",
                 "Mandolīna",
                 "Tamburīns",
                 "Klavieres",
@@ -87,8 +87,8 @@
                 "Cannon 80D kamera"
             ],
             "notes": {
-                "guitars": "Ģitāras ir par papildu maksu, vai atnesat savas stīgas",
-                "cymbals": "Šķivji ir par papildu maksu 25€, vai jūs varat atnest savus šķivjus"
+                "guitars": "Ģitāras ir par papildu maksu (atkarībā no ģitāras), vai arī atnesiet savas stīgas",
+                "cymbals": "Šķīvji ir par papildu maksu 25€, vai arī jūs varat atnest savus šķīvjus"
             }
         },
         "images": {
@@ -103,15 +103,15 @@
     },
     "contact": {
         "title": "Sazinieties ar mums",
-        "description": "Gatavs radīt kaut ko brīnišķīgu? Sazinieties ar mums, lai rezervētu sesiju vai apspriestu savu projektu",
+        "description": "Vai esat gatavi radīt ko lielisku? Sazinieties ar mums, lai rezervētu sesiju vai apspriestu savu projektu",
         "form": {
             "title": "Rezervēt sesiju vai uzdot jautājumu",
             "subtitle": "Aizpildiet formu un mēs sazināsimies ar jums",
             "name": "Vārds*",
             "email": "E-pasts*",
             "phone": "Tālrunis",
-            "date": "Ideālais datums",
-            "pickDate": "Izvēlēties datumu",
+            "date": "Vēlamais datums",
+            "pickDate": "Izvēlieties datumu",
             "message": "Ziņojums*",
             "messagePlaceholder": "Pastāstiet mums par savu projektu un kādu aprīkojumu jums vajag...",
             "sendMessage": "Sūtīt ziņojumu",
@@ -141,7 +141,7 @@
             "videoPrice": "20€",
             "equipmentRental": "Aprīkojuma noma",
             "equipmentPrice": "Mainās",
-            "discountNote": "Jaunie mūziķi un reperi maksā",
+            "discountNote": "Cena jaunajiem mūziķiem un reperiem:",
             "discountPrice": "20€/h",
             "discountFor": "par mūzikas ierakstīšanu"
         }
@@ -160,7 +160,7 @@
     "footer": {
         "description": "Ronalda Znatnaja mūzikas un skaņas ierakstu studija",
         "quickLinks": {
-            "title": "Ātrie saiti",
+            "title": "Noderīgas saites",
             "services": "Pakalpojumi",
             "studio": "Studija",
             "portfolio": "Portfolio",
